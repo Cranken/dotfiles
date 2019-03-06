@@ -11,27 +11,12 @@ general {
         interval = 1
 }
 
-order += "battery all"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
-order += "cpu_temperature 0"
-order += "wireless _first_"
 order += "ethernet _first_"
 order += "tztime local"
 
-battery all {
-	format = "%status %percentage"
-	format_down = "No battery"
-	last_full_capacity = true
-	integer_battery_capacity = true
-	low_threshold = 15
-	status_unk = ""
-	status_chr = "⚡" 
-	status_bat = "🔋"
-	status_full = "☻"
-	path = "/etc/fakedev/power_supply/BAT%d/uevent"
-}
 
 wireless _first_ {
 	format_up = "W: (%quality at %essid) %ip"
@@ -46,12 +31,6 @@ cpu_usage {
 	format = "CPU: %usage"
 	max_threshold = 75
 	degraded_threshold = 35
-}
-
-cpu_temperature 0 {
-	format = "Temp: %degrees °C"
-	max_threshold = 50
-	path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
 disk "/" {
