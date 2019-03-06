@@ -2,7 +2,7 @@
 ! shamelessly stolen from http://git.sysphere.org/dotfiles/tree/Xdefaults
 
 !{{{ XFT
-Xft.dpi:	192
+!Xft.dpi:	90
 Xft.antialias:	1
 Xft.hinting: 	1
 Xft.hintstyle:	hintfull
