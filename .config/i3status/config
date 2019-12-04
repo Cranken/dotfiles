@@ -30,7 +30,7 @@ battery all {
 	status_chr = "⚡" 
 	status_bat = "🔋"
 	status_full = "☻"
-	path = "/etc/fakedev/power_supply/BAT%d/uevent"
+	path = "/sys/class/power_supply/BAT%d/uevent"
 }
 
 wireless _first_ {
